@@ -1,4 +1,4 @@
-cluster_id	repeat_class	repeat_subclass	repeat_order	repeat_superfamily	repeat_family	mean	median	min	max	sd	iqr	count
+cluster_id	original_rep_cat	repeat_class	repeat_subclass	repeat_order	repeat_superfamily	repeat_family	mean	median	min	max	sd	iqr	count
 Cluster100	LTR-Pao	I	Unclassified	LTR	Bel-Pao	Pao	0.0722308928571429	0.043165	0.00053	0.60602	0.105055701223475	0.0607925	112
 Cluster1006	LINE-RTE-RTE	I	Unclassified	LINE	RTE	Unclassified	0.0617851282051282	0.012815	0	1.49168	0.165399635813966	0.044205	468
 Cluster1013	LINE-RTE-RTE	I	Unclassified	LINE	RTE	Unclassified	0.0713266788990826	0.02747	0	1.26223	0.123865044001651	0.08712	545
