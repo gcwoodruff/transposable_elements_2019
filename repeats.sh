@@ -1087,7 +1087,7 @@ cat *.tmp > $wkdir/43_bedtools_nuc_perc_N_3-11-19/13_cat/remanei
 #combine all species files
 cd $wkdir/43_bedtools_nuc_perc_N_3-11-19/13_cat/
 
-cat * > global_repeat_denisty_10kb_win_norm_dist_cent.tsv
+cat * > global_repeat_density_10kb_win_norm_dist_cent.tsv
 ######The above is the data for Figure 2, Figure 4a and Supplemental Figure 1-2! [formerly "all" , "all_N_account_for_unassembled_bases_4-16-19"]
 
 
@@ -4600,7 +4600,7 @@ mv remanei.tmp remanei
 
 for i in *; do echo -e "Chr\tBP\tnum_rep_bp\tspecies\tnorm_dist_center" | cat - $i > $i.tmp && mv $i.tmp $i; done
 
-mv all global_repeat_denisty_remove_four_superfamilies.tsv # formerly "tot_bp_rep_remove_four_superfamilies_4-30-19.tsv"
+mv all global_repeat_density_remove_four_superfamilies.tsv # formerly "tot_bp_rep_remove_four_superfamilies_4-30-19.tsv"
 	#THIS is the data used for Figure 5!
 }
 

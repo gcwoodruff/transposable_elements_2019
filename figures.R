@@ -46,7 +46,7 @@ ggtree(tree_2) + geom_tiplab() + geom_treescale()
 library(lemon)
 
 #get data in there (see lines 706-1095 of repeats.sh to see how this is generated)
-rep_data <- read.table("global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
 
 #bp to MB
 rep_data$MB <- rep_data$BP/1000000
@@ -70,7 +70,7 @@ ggplot(big_plot_data, aes(x = MB, y = perc_N)) + geom_point(alpha=0.12, size=0.2
 #Supplemental figure 1. Sina plot of repetitive content in arms and centers in all species ; same data as figure 2
 
 
-rep_data <- read.table("global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
 
 
 library(ggplot2)
@@ -106,7 +106,7 @@ ggplot(rep_data, aes(x = species, y = perc_N)) + geom_sina(aes(colour=chr_str_ty
 #supplemental figure 2 -- repeat density by normalized chromosomal position for all species ; same data as figure 2
 
 
-rep_data <- read.table("global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
 
 rep_data$MB <- rep_data$BP/1000000
 
@@ -127,7 +127,7 @@ ggplot(rep_data, aes(x = norm_dist_center, y = perc_N)) + geom_point(alpha=0.05,
 #supplemental figure 2 -- linear model coefficients for the relationship between repeat density by normalized chromosomal position for all species
 
 
-beta_data <- read.table("global_repeat_denisty_chr_pos_lm_coefficients.tsv", sep="\t", header=TRUE)
+beta_data <- read.table("global_repeat_density_chr_pos_lm_coefficients.tsv", sep="\t", header=TRUE)
 beta_data$species <- factor(beta_data$species, levels = c("briggsae","nigoni","remanei","elegans","inopinata"))
 
 levels(beta_data$species)[levels(beta_data$species)=="briggsae"] <- "C. briggsae"
@@ -197,7 +197,7 @@ ggplot(chr_iii, aes(x = MB, y = perc_N)) + geom_point(alpha=0.25, size=0.5,aes(c
 #Figure 4a
 
 #get data in there and prepare for plotting
-rep_data <- read.table("global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
 
 rep_data$MB <- rep_data$BP/1000000
 
@@ -489,7 +489,7 @@ ggplot(dat, aes(x=repeat_superfamily,y=mean)) + geom_sina(aes(colour=repeat_supe
 #Figure 5, remove four superfamiliies from C. inopinata to see change in global repetitive genomic landscape
 
 
-rep_data <- read.table("global_repeat_denisty_remove_four_superfamilies.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_remove_four_superfamilies.tsv", sep="\t", header=TRUE)
 
 rep_data$MB <- rep_data$BP/1000000
 

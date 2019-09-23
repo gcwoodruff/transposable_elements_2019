@@ -11,7 +11,7 @@
 #############
 
 #get data in there (see lines 706-1095 of repeats.sh to see how this is generated)
-rep_data <- read.table("global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
 
 #get readable unit of bp
 rep_data$MB <- rep_data$BP/1000000
@@ -67,7 +67,7 @@ c(mean(ci[ci$chr_str_type == "arms",]$perc_N),mean(ci[ci$chr_str_type == "center
 
 
 #linear models, repeat density ~ chromosome position
-#the coefficients were put into file "global_repeat_denisty_chr_pos_lm_coefficients.tsv" for Supplemental figure 3
+#the coefficients were put into file "global_repeat_density_chr_pos_lm_coefficients.tsv" for Supplemental figure 3
 
 summary(lm(perc_N ~ norm_dist_center, data=cb))
 	#briggsae
@@ -599,7 +599,7 @@ summary(lm(log(percent_genome_repeat+1) ~ log(arm_cen_effect_size+1), data=cr))
 #remove four superfamilies from C. inopinata to see if there is an impact on the global genomic landscape
 
 #get data in there
-rep_data <- read.table("global_repeat_denisty_remove_four_superfamilies.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_density_remove_four_superfamilies.tsv", sep="\t", header=TRUE)
 #readable measure of bp
 rep_data$MB <- rep_data$BP/1000000
 #percentage of window repetitive
