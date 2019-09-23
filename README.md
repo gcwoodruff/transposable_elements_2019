@@ -25,7 +25,7 @@ figures.R
 
 The data generated for the paper are in the folder "data."
 
-Scripts for evolutionary simulations are in "SLiM_scripts."
+Scripts for evolutionary simulations are in "SLiM_scripts" (by Anastasia Teterina based on recipe 13.6 "Modeling transposable elements" in the SLiM manual v3.0).
 
 Additional scripts to make "repeat.sh" work are in the folder "scripts" (I did not write all of these; thanks everyone for sharing).
 
