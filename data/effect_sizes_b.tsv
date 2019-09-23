@@ -1,0 +1,7 @@
+species	gene_eff_size	gene_eff_size_upper	gene_eff_size_lower	repeat_eff_size	repeat_eff_size_upper	repeat_eff_size_lower	reproductive_mode
+briggsae	-0.4055431	-0.2834259	-0.5276602	1.139733	1.270059	1.009407	selfing
+elegans	-0.6088739	-0.4822377	-0.7355101	1.825696	1.973047	1.678346	selfing
+inopinata	-0.3318094	-0.2192984	-0.4443205	0.04538246	0.15714165	-0.06637672	female/male
+nigoni	-0.415401	-0.2999936	-0.5308083	0.9103546	1.0303056	0.7904036	female/male
+remanei	-0.7123222	-0.5979684	-0.826676	1.432227	1.556525	1.30793	female/male
+inopinata_no_transposon_cds	-0.06872575	0.04305204	-0.18050353	0.04538246	0.15714165	-0.06637672	female/male
