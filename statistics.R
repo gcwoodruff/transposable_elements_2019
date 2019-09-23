@@ -1264,7 +1264,7 @@ summary(lm(repeat_eff_size ~ gene_eff_size, data=eff_data_no_inopinata_with_tsp)
 #############
 #############
 
-#see file XXXX for how simulations and data were generated.
+#see folder "SLiM_scripts" for how simulations and data were generated.
 
 #prepare SLiM data for plotting and arm-center effect size statistics
 
