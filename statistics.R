@@ -11,7 +11,7 @@
 #############
 
 #get data in there (see lines 706-1095 of repeats.sh to see how this is generated)
-rep_data <- read.table("/home/gavin/genome/genome/repeats_12-18-18/preparing_for_deposition_8-9-19/data/global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_denisty_10kb_win_norm_dist_cent.tsv", sep="\t", header=TRUE)
 
 #get readable unit of bp
 rep_data$MB <- rep_data$BP/1000000
@@ -197,7 +197,7 @@ library(Rmisc)
 
 #get data in there (see lines 1434-4447 of repeats.sh to see how this is generated)
 
-rep_dat <- read.table("/home/gavin/genome/genome/repeats_12-18-18/preparing_for_deposition_8-9-19/data/all_repeat_taxa_density.tsv", sep="\t", header=TRUE)
+rep_dat <- read.table("all_repeat_taxa_density.tsv", sep="\t", header=TRUE)
 
 #break up by repeat taxonomic rank
 
@@ -599,7 +599,7 @@ summary(lm(log(percent_genome_repeat+1) ~ log(arm_cen_effect_size+1), data=cr))
 #remove four superfamilies from C. inopinata to see if there is an impact on the global genomic landscape
 
 #get data in there
-rep_data <- read.table("/home/gavin/genome/genome/repeats_12-18-18/preparing_for_deposition_8-9-19/data/global_repeat_denisty_remove_four_superfamilies.tsv", sep="\t", header=TRUE)
+rep_data <- read.table("global_repeat_denisty_remove_four_superfamilies.tsv", sep="\t", header=TRUE)
 #readable measure of bp
 rep_data$MB <- rep_data$BP/1000000
 #percentage of window repetitive
@@ -650,7 +650,7 @@ ci <- rep_data[rep_data$species == "inopinata",]
 
 #get gene density data in there
 
-rep_dat <- read.table("/home/gavin/genome/genome/repeats_12-18-18/preparing_for_deposition_8-9-19/data/gene_density.tsv", sep="\t", header=TRUE)
+rep_dat <- read.table("gene_density.tsv", sep="\t", header=TRUE)
 	# (this is the same as file "all_gene_dens_norm_chr_pos.tsv" line 5488 repeats.sh)
 
 #define arms and centers
@@ -1206,7 +1206,7 @@ cohen.d(ci_no_tsp_cds[ci_no_tsp_cds$chr_str_type =="arms",]$perc_N,ci_no_tsp_cds
 #lm gene arm-cen effect size and repeats arm-cen effect size
 
 
-eff_data <- read.table("/home/gavin/genome/genome/repeats_12-18-18/preparing_for_deposition_8-9-19/data/effect_sizes_b.tsv", sep="\t", header=TRUE)
+eff_data <- read.table("effect_sizes_b.tsv", sep="\t", header=TRUE)
 
 
 summary(lm(repeat_eff_size ~ gene_eff_size, data=eff_data))
@@ -1412,7 +1412,7 @@ write.table(
 
 
 #get data in there
-rep_dat <- read.table("/home/gavin/genome/genome/repeats_12-18-18/preparing_for_deposition_8-9-19/data/simulations_TE_full_table_50_replicates.txt", sep="\t", header=TRUE)
+rep_dat <- read.table("simulations_TE_full_table_50_replicates.txt", sep="\t", header=TRUE)
 
 
 #get arm-center effect sizes
