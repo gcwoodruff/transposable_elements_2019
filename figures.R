@@ -51,7 +51,7 @@ rep_data <- read.table("global_repeat_density_10kb_win_norm_dist_cent.tsv", sep=
 #bp to MB
 rep_data$MB <- rep_data$BP/1000000
 #bp repetitive to % repetitive
-rep_data$perc_N <- (rep_data$bp_rep/10000)*100
+rep_data$perc_N <- (rep_data$num_rep/10000)*100
 
 #re-order species levels
 rep_data$species <- factor(rep_data$species, levels = c("briggsae","nigoni","remanei","elegans","inopinata"))
