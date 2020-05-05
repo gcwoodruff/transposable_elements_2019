@@ -25,13 +25,15 @@ figures.R
 
 The data generated for the paper are in the folder "data."
 
-Scripts for evolutionary simulations are in "SLiM_scripts" (by Anastasia Teterina based on recipe 13.6 "Modeling transposable elements" in the SLiM manual v3.0).
+Scripts for evolutionary simulations are in the folder "revision/simulations." Scripts used for the first draft of this manuscript are in "SLiM_scripts" (by Anastasia Teterina based on recipe 13.6 "Modeling transposable elements" in the SLiM manual v3.0).
 
 Additional scripts to make "repeat.sh" work are in the folder "scripts" (I did not write all of these; thanks everyone for sharing).
 
 Additional repeat libraries used for repeat annotation are in the folder "additional_repeat_libraries."
 
 Additional .pdf's showing the genomic landscapes and distributions of various repeat taxa, insertion ages, and insertion lengths are in the folder "supplemental_figures." 
+
+Scripts used for the revision are in the folder "revision." This largely has material for estimating TE ages and evolutionary simulations. There are even **more** supplemental figures here as well.
 
 
 
