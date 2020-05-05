@@ -33,7 +33,7 @@ Additional repeat libraries used for repeat annotation are in the folder "additi
 
 Additional .pdf's showing the genomic landscapes and distributions of various repeat taxa, insertion ages, and insertion lengths are in the folder "supplemental_figures." 
 
-Scripts used for the revisions published in MBE are in the folder "revision." This largely has material for estimating TE ages and evolutionary simulations. There are even **more** supplemental figures here as well.
+Scripts and data used for the revisions published in MBE are in the folder "revision." This largely has material for TE ages and evolutionary simulations. There are even **more** supplemental figures here as well.
 
 
 
