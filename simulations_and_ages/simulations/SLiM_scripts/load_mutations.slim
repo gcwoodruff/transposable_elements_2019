@@ -1,0 +1,64 @@
+initialize() {
+//initializeTreeSeq();
+    setSeed(seed);
+	defineConstant("L", 3e6);               // chromosome length
+	defineConstant("teInitialCount", 1000);  // initial number of TEs
+	defineConstant("teJumpP", 0.0001);      // TE jump probability
+	defineConstant("teDisableP", 0.00005);  // disabling mut probability
+	
+	initializeMutationRate(0.0);
+	initializeMutationType("m1", 0.5, "f", 0.0);  // neutral
+	initializeGenomicElementType("g1", m1, 1.0);
+	initializeGenomicElement(g1, 0, L-1);
+	initializeRecombinationRate(c(5e-7,1e-9,5e-7),c(asInteger((L-1)/3),asInteger(2*(L-1)/3),L-1));
+	
+	// transposon mutation type; also neutral
+	initializeMutationType("m2", 0.5, "f", 0.0);
+	m2.convertToSubstitution = F;
+	
+	// disabled transposon mutation type;
+	initializeMutationType("m3", 0.5, "f", 0.0);
+	m3.convertToSubstitution = F;
+	
+
+	//filename
+//	defineConstant("TEfile", paste0(getSeed()+"_TE_DISARM_DISCENT_ACTARM_ACTCENT_DOM_NEUTRAL.txt"));
+//	deleteFile(TEfile);
+
+
+}
+1 late() {
+    sim.readFromPopulationFile(filename);
+    //get the filename
+    //tmp=strsplit(filenamefull, "/");
+    //ctmp=tmp[length(tmp)-1];
+    //out=strsplit(tmp, ".")[0];
+    out=strsplit(filename,".")[0];    
+    outputname=paste0(out + "---Type_Freq_Fixed_Pos_Center_Origin_Ns.TXT");
+
+    //active and disabled transposons
+    amuts = sim.mutationsOfType(m2);
+    dmuts = sim.mutationsOfType(m3);
+    aFreq=sim.mutationFrequencies(NULL, amuts);
+    dFreq=sim.mutationFrequencies(NULL, dmuts);
+    aPos=amuts.position;
+    dPos=dmuts.position;
+    //different properties
+    Type=c(rep("Active",length(amuts)),rep("Disabled",length(dmuts)));
+    Frequency=c(aFreq,dFreq);
+    IsFixed=c((aFreq==1),(dFreq==1));
+    Position=c(aPos,dPos);
+    InCenter=c((aPos>asInteger((L-1)/3) & aPos<asInteger(2*(L-1)/3)),(dPos>asInteger((L-1)/3) & dPos<asInteger(2*(L-1)/3)));
+    Origin=c(amuts.originGeneration,dmuts.originGeneration);
+    Ns=c(amuts.selectionCoeff*5000,dmuts.selectionCoeff*5000);
+
+for (varname in c("Type","Frequency","IsFixed","Position","InCenter","Origin","Ns")){
+        var = executeLambda(paste0(varname + ";"));
+        lines1=paste(varname +"\t" + paste(var,sep="\t"));
+        writeFile(outputname, lines1, append=T);
+    }
+
+
+
+
+}
