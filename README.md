@@ -23,17 +23,15 @@ This was used to make figures.
 figures.R
 ```
 
-The data generated for the paper are in the folder "data."
+Most of the data generated for the paper are in the folder "data."
 
-Scripts for evolutionary simulations published in MBE are in the folder "revision/simulations." SLiM scripts used for the first draft of this manuscript on bioRxiv are in "SLiM_scripts" (by Anastasia Teterina based on recipe 13.6 "Modeling transposable elements" in the SLiM manual v3.0).
+Scripts and data for evolutionary simulations published in MBE are in the folder "simulations_and_ages/simulations" (by Anastasia Teterina based on recipe 13.6 "Modeling transposable elements" in the SLiM manual v3.0).
+
+Scripts and data used for estimating TE ages published in MBE are in the folder "simulations_and_ages/ages_landscapes."
 
 Additional scripts to make "repeat.sh" work are in the folder "scripts" (I did not write all of these; thanks everyone for sharing).
 
-Additional repeat libraries used for repeat annotation are in the folder "additional_repeat_libraries."
-
-Additional .pdf's showing the genomic landscapes and distributions of various repeat taxa, insertion ages, and insertion lengths are in the folder "supplemental_figures." 
-
-Scripts and data used for the revisions published in MBE are in the folder "revision." This largely has material for TE ages and evolutionary simulations. There are even **more** supplemental figures here as well.
+Additional .pdf's showing the genomic landscapes and distributions of various repeat taxa, insertion ages, and insertion lengths are in the folder "supplemental_figures." There are even **more** supplemental figures in the folder "/revision/supplemental_figures."
 
 
 
