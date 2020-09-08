@@ -511,7 +511,7 @@ ggplot(ce_and_ci, aes(x = MB, y = perc_N)) + geom_point(alpha=0.12, size=0.25,co
 #############
 #############
 #############
-#section "Gene diversity is negatively correlated with repeat content in all species but C. inopinata"
+#section "Gene density is negatively correlated with repeat content in all species but C. inopinata"
 #############
 #############
 #############
